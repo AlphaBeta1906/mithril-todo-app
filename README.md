@@ -1,6 +1,6 @@
 # mithril-todo-app
 
-a simple todo app create using [mithril.js](https://mithril.js.org/) framework.for template,this project use [mithril-cli](https://www.npmjs.com/package/create-mithril-app).
+a simple todo app create using [mithril.js](https://mithril.js.org/) framework.for template,this project use [mithril-create-app](https://www.npmjs.com/package/create-mithril-app).
 
 ## How to run locally 
 ```bash
