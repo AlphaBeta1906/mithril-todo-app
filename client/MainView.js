@@ -7,6 +7,12 @@ const state = {
   edit_todo: "",
   save_todo: function () {
     localStorage.setItem("todo", JSON.stringify(todos))
+  },
+  _edit_todo: function(){
+  	 todo.name = state.edit_todo
+     todo.edit = false
+     state.edit_todo = ""
+     state.save_todo()
   }
 }
 
@@ -18,10 +24,7 @@ const editTodo = {
         const index = vnode.attrs.id
         todos.map(function (todo) {
           if (todo.id === index && state.edit_todo !== "") {
-            todo.name = state.edit_todo
-            todo.edit = false
-            state.edit_todo = ""
-            state.save_todo()
+				state._edit_todo()
           }
         })
       }
@@ -81,9 +84,7 @@ const todoList = {
         m("button.btn tooltipped waves-effect waves-light  indigo lighten-1 mx-2", {
           onclick: function () {
             if (todo.edit && state.edit_todo !== "") {
-              todo.name = state.edit_todo
-              state.edit_todo = ""
-              state.save_todo()
+				state._edit_todo()
             }
             todo.edit = !todo.edit
           },
