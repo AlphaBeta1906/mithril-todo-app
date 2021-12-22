@@ -83,6 +83,7 @@ const todoList = {
             if (todo.edit && state.edit_todo !== "") {
               todo.name = state.edit_todo
               state.edit_todo = ""
+              state.save_todo()
             }
             todo.edit = !todo.edit
           },
