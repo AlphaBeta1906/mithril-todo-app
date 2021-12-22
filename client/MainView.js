@@ -84,7 +84,7 @@ const todoList = {
         m("button.btn tooltipped waves-effect waves-light  indigo lighten-1 mx-2", {
           onclick: function () {
             if (todo.edit && state.edit_todo !== "") {
-				state._edit_todo()
+				state._edit_todo(todo)
             }
             todo.edit = !todo.edit
           },
