@@ -8,7 +8,7 @@ const state = {
   save_todo: function () {
     localStorage.setItem("todo", JSON.stringify(todos))
   },
-  _edit_todo: function(){
+  _edit_todo: function(todo){
   	 todo.name = state.edit_todo
      todo.edit = false
      state.edit_todo = ""
@@ -24,7 +24,7 @@ const editTodo = {
         const index = vnode.attrs.id
         todos.map(function (todo) {
           if (todo.id === index && state.edit_todo !== "") {
-				state._edit_todo()
+				state._edit_todo(todo)
           }
         })
       }
