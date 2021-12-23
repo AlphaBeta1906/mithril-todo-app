@@ -2,15 +2,26 @@
 import m from 'mithril';
 import { MainView } from './MainView';
 
+var footer = {
+	view:function(){
+		
+	}
+}
+
 var App = {
 	view : function(){
-		return m("",m("nav",m(".nav-wrapper"
+		return m("",
+					m("nav",m(".nav-wrapper"
 				  			,m("span.brand-logo center","Todo app")
 				  		)
 				  	),
 					m(".container p-3 mt-3",
-					m(MainView)
+					m(MainView),
 				  ),
+					m("footer.page-footer fixed-bottom",
+						m(".footer-copyright",
+							m(".container",
+								"© copyright 2021")))
 				)
 	}
 }
