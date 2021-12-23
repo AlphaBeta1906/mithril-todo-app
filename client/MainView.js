@@ -85,8 +85,9 @@ const todoList = {
           onclick: function () {
             if (todo.edit && state.edit_todo !== "") {
 				state._edit_todo(todo)
+				todo.edit= !todo.edit
             }
-            todo.edit = !todo.edit
+            todo.edit= !todo.edit
           },
           style: {
             padding_left: "20px"
